@@ -3,8 +3,8 @@
   <title>min hjemmeside</title>
   </head>
 <button id="b1" type="button" style= "background-color:AF2BBF"
-                  onmouseenter='style=background-color:#FFFFFF;'
-        onmouseleave='style=background-color:#AF2BBF;'
+                  onmouseenter='mouseEnter();'
+        onmouseleave='mouseLeave();'
     
         onclick='alert("hej med dig");'
         
@@ -26,6 +26,16 @@
     }
 }
   </script>
+  
+  <script>
+function mouseEnter() {
+  document.getElementById("b1").style.color = "red";
+}
+
+function mouseLeave() {
+  document.getElementById("b1").style.color = "black";
+}
+</script>
   <!--Hej jeg prøver på at få den til at lave en note og så gemme den som en cookie til næste gang-->
 <body style = background-color:#a72639>
   <h1 style=color:8EB1C7><em>Velkommen</em></h1>
