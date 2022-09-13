@@ -10,6 +10,9 @@
         > tryk på mig</button>
   
   <button id='b2' style= "background-color:AF2BBF"
+          
+          onmouseenter='nyb21();'
+          onmouseleave='nyb22();'
           onclick='let note = prompt("Din sidste note var: "+oldnote); if (note == null) {alert("Oh Okay, vi ses :)");}
                                       
                                                   else if (note == "") {alert("Oh Okay, vi ses :-)");}
@@ -34,6 +37,15 @@ function mouseEnter() {
 function mouseLeave() {
   document.getElementById("b1").style.color = "black";
 }
+    
+    function nyb21() {
+  document.getElementById("b2").style.color = "red";
+}
+
+function nyb22() {
+  document.getElementById("b2").style.color = "black";
+}
+  
     function Nyh1(){
     document.getElementById("h1").style.color = "#6c90a5";
     }
