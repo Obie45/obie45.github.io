@@ -4,13 +4,24 @@
   </head>
 <button style= background-color:AF2BBF onclick='alert("hej med dig");'> tryk på mig</button>
   <button style= background-color:AF2BBF onclick='let note = prompt("Din sidste note var: "+oldnote); if (note == null) {alert("Oh Okay, vi ses :)");}
+                                      
                                                   else if (note == "") {alert("Oh Okay, vi ses :-)");}
                                                   else {oldnote = documentcookie = note; "max-age=3600;"}'> Notes </button>
-  <script>var oldnote = note</script>
+  <script>var oldnote = note;
+  
+   document.onkeydown = function(e){
+    e = e || window.event;
+    var key = e.which || e.keyCode;
+    if(key===84){
+        //kode her, 84 er T
+    }
+}
+  </script>
   <!--Hej jeg prøver på at få den til at lave en note og så gemme den som en cookie til næste gang-->
 <body style = background-color:#a72639>
   <h1 style=color:8EB1C7><em>Velkommen</em></h1>
   <p style=color:f12E4C>Du er nu inde på <strong>min</strong> hjemmeside</p>
+  
   <!--Hej personen der kigger inde her-->
   <!--<p>Kan du trykke på knappen?<button  onclick='txt = "a"; while(1) txt = txt += "a";'>Her</button></p> -->
   
