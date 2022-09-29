@@ -3,13 +3,34 @@
   <title>min hjemmeside</title>
   </head>
 <button id="b1" type="button" style= "background-color:AF2BBF"
-                  onmouseenter='mouseEnter();'
+        onmouseenter='mouseEnter();'
         onmouseleave='mouseLeave();'
     
         onclick='Nyh1(); alert("hej med dig");'
         > tryk på mig</button>
+
+        <button id="b3" type="button" style= "background-color:AF2BBF"
+        onmouseenter='mouseEnter2();'
+        onmouseleave='mouseLeave2();'
+
+         onclick=' thisf();'> Continue</button>
+
+        <button id="b4" type="button" style= "background-color:AF2BBF"
+        onmouseenter='mouseEnter3();'
+        onmouseleave='mouseLeave3();'
+    
+        onclick='var svar = Math.floor((Math.random() * 100) + 1);
+        function thisf(){
+    var x = prompt("tag et tal fra 1-100    "); if (x == null) {}
+    else if (x == ""){}
+    else if (x == svar) {alert("it works");}
+    else if (x > svar){alert("for meget");thisf();}
+    else if (x < svar){alert("for lidt"); thisf();} 
+    else {}} thisf();'
+
+        > tryk på mig</button>
   
-  <button id='b2' style= "background-color:AF2BBF"
+  <button id='b2' style= "background-color:#AF2BBF"
           
           onmouseenter='nyb21();'
           onmouseleave='nyb22();'
@@ -17,14 +38,24 @@
                                       
                                                   else if (note == "") {alert("Oh Okay, vi ses :-)");}
                                                   else {oldnote = documentcookie = note; "max-age=3600;"}'> Notes </button>
+  
+  <!--<script>
+     function findTal(){
+        alert("virker? "+talSvar);
+        if (talSvar==svar) {alert("Det var Korrekt!");} 
+        else if (talSvar>svar) {var talSvar = prompt("Mindre!"); findTal();}
+        else  {var talSvar = prompt("Mere"); findTal()};
+
+    }
+  </script>
+  -->
   <script>var oldnote = note;
   
-   document.onkeydown = function(e){
+  document.onkeydown = function(e){
     e = e || window.event;
     var key = e.which || e.keyCode;
     if(key===84){
-      alert("Hi this alert is working")
-        //kode her, 84 er T
+        alert("hel");
     }
 }
   </script>
@@ -37,7 +68,23 @@ function mouseEnter() {
 function mouseLeave() {
   document.getElementById("b1").style.color = "black";
 }
-    
+
+function mouseEnter2() {
+  document.getElementById("b3").style.color = "red";
+}
+
+function mouseLeave2() {
+  document.getElementById("b3").style.color = "black";
+}
+   
+function mouseEnter3() {
+  document.getElementById("b4").style.color = "red";
+}
+
+function mouseLeave3() {
+  document.getElementById("b4").style.color = "black";
+}
+
     function nyb21() {
   document.getElementById("b2").style.color = "red";
 }
@@ -49,6 +96,7 @@ function nyb22() {
     function Nyh1(){
     document.getElementById("h1").style.color = "#397f82";
     }
+
 </script>
   
   <!--Hej jeg prøver på at få den til at lave en note og så gemme den som en cookie til næste gang-->
@@ -56,6 +104,7 @@ function nyb22() {
 <body style = background-color:#a72639>
   <h1 id='h1'style=color:8EB1C7><em>Velkommen</em></h1>
   <p style=color:f12E4C>Du er nu inde på <strong>min</strong> hjemmeside</p>
+  
   
   <!--Hej personen der kigger inde her-->
   <!--<p>Kan du trykke på knappen?<button  onclick='txt = "a"; while(1) txt = txt += "a";'>Her</button></p> -->
