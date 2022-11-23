@@ -45,9 +45,9 @@ Smart kode "lånt" puttes i <style></styele> i head
         function thisf(){
     var x = prompt("tag et tal fra 1-100    "); if (x == null) {}
     else if (x == ""){}
-    else if (x == svar) {alert("it works");}
-    else if (x > svar){alert("for meget");thisf();}
-    else if (x < svar){alert("for lidt"); thisf();} 
+    else if (x == svar) {; alert("it works /n Forsøg: "+ fs); fs*0;}
+    else if (x > svar){alert("for meget"); fs +1; thisf();}
+    else if (x < svar){alert("for lidt"); fs +1; thisf();} 
     else {}} thisf();'
 
         > tryk på mig</button>
@@ -83,6 +83,7 @@ Smart kode "lånt" puttes i <style></styele> i head
   </script>
   
   <script>
+    var fs = 0
 function mouseEnter() {
   document.getElementById("b1").style.color = "red";
 }
