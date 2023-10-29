@@ -72,14 +72,19 @@ liiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
                                                   else {oldnote = documentcookie = note; "max-age=3600;"}'> Notes </button>
   
   <!--<script>
-  var mn = "1";
-  var j;
+ 
      function findTal(){
         alert("virker? "+talSvar);
         if (talSvar==svar) {alert("Det var Korrekt!");} 
         else if (talSvar>svar) {var talSvar = prompt("Mindre!"); findTal();}
         else  {var talSvar = prompt("Mere"); findTal()};
-
+  </script>
+  -->
+  <script>
+    var oldnote = note;
+    
+     var mn = "1";
+  var j;
     }
   function nysang(){
   if (j< 3) {
@@ -89,12 +94,10 @@ liiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
   else {
   j = 1;
   mn = "1";
+    }
   }
-  }
-  </script>
-  -->
-  <script>var oldnote = note;
-  
+
+    
   document.onkeydown = function(e){
     e = e || window.event;
     var key = e.which || e.keyCode;
