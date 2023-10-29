@@ -72,7 +72,8 @@ liiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
                                                   else {oldnote = documentcookie = note; "max-age=3600;"}'> Notes </button>
   
   <!--<script>
-  let j;
+  var mn = "1";
+  var j;
      function findTal(){
         alert("virker? "+talSvar);
         if (talSvar==svar) {alert("Det var Korrekt!");} 
@@ -83,10 +84,11 @@ liiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
   function nysang(){
   if (j< 3) {
   j+=1;
-  
+  var mn = j.toString();
   }
   else {
-  j = 1
+  j = 1;
+  mn = "1";
   }
   }
   </script>
@@ -168,7 +170,7 @@ function nyb22() {
          onclick='nysang();'> Næste sang</button>
   <div>
     <audio controls autoplay>
-  <source src="music1.mp3">
+  <source src="music" + mn +".mp3">
       Does not support HTML audio
 </audio>
     <script>
