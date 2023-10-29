@@ -72,6 +72,7 @@ liiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
                                                   else {oldnote = documentcookie = note; "max-age=3600;"}'> Notes </button>
   
   <!--<script>
+  let j;
      function findTal(){
         alert("virker? "+talSvar);
         if (talSvar==svar) {alert("Det var Korrekt!");} 
@@ -79,6 +80,15 @@ liiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
         else  {var talSvar = prompt("Mere"); findTal()};
 
     }
+  function nysang(){
+  if (j< 3) {
+  j+=1;
+  
+  }
+  else {
+  j = 1
+  }
+  }
   </script>
   -->
   <script>var oldnote = note;
@@ -152,9 +162,13 @@ function nyb22() {
   
   <p><a href="https://obie45.github.io/Video.html"> video (not done)</a></p>
 
+  <button type="button" style= "background-color:AF2BBF"
+
+
+         onclick='nysang();'> Næste sang</button>
   <div>
     <audio controls autoplay>
-  <source src="music.mp3">
+  <source src="music1.mp3">
       Does not support HTML audio
 </audio>
     <script>
